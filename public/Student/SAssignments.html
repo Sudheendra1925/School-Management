@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Tracker</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    table th, table td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #6a11cb;
+      color: white;
+      font-size: 18px;
+    }
+
+    table td {
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Styling for status */
+    .status-pending {
+      color: #ff9800;
+      font-weight: bold;
+    }
+
+    .status-completed {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    .status-overdue {
+      color: #f44336;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Assignment Tracker</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Assignment Name</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Description</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Math Homework</td>
+        <td>2024-10-05</td>
+        <td class="status-pending">Pending</td>
+        <td>Write 3 table 3 times</td>
+      
+      </tr>
+      <tr>
+        <td>Science Project</td>
+        <td>2024-10-01</td>
+        <td class="status-overdue">Overdue</td>
+        <td>Write a record on pendulum expeirment</td>
+        
+      </tr>
+      <tr>
+        <td>English Essay</td>
+        <td>2024-10-07</td>
+        <td class="status-pending">Pending</td>
+        <td>Write a poem on Bharath</td>
+      </tr>
+      <tr>
+        <td>History Presentation</td>
+        <td>2024-10-03</td>
+        <td class="status-completed">Completed</td>
+        <td>Write your observation on war between Shivaji Maharjaj and Aurangzeb</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

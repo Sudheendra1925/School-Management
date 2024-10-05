@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assign Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-size: 16px;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="date"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    select {
+      height: 40px;
+    }
+
+    button {
+      background-color: #6a11cb;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2575fc;
+    }
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    table th, table td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #6a11cb;
+      color: white;
+      font-size: 18px;
+    }
+
+    table td {
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Styling for status */
+    .status-pending {
+      color: #ff9800;
+      font-weight: bold;
+    }
+
+    .status-completed {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    .status-overdue {
+      color: #f44336;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Assign New Assignment</h2>
+    
+    <!-- Form starts here -->
+    <form action="/submit-assignment" method="POST">
+      <!-- Assignment name input -->
+      <label for="assignmentName">Assignment Name:</label>
+      <input type="text" id="assignmentName" name="assignmentName" placeholder="Enter assignment name" required>
+
+      <!-- Due date input -->
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate" required>
+
+      <!-- Assignment description -->
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" placeholder="Enter assignment description" required></textarea>
+
+      <!-- Assignment status dropdown -->
+      <label for="class">Class:</label>
+      <select id="status" name="status" required>
+        <option value="">Select Class</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <!-- Submit button -->
+      <button type="submit">Assign Assignment</button>
+    </form>
+  </div>
+<div>
+<h1>Assigned Assignment</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Assignment Name</th>
+        <th>class</th>
+        <th>Due Date</th>
+        <th>Description</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FA1</td>
+        <td>5</td>
+        <td>2024-10-05</td>
+        <td>FA1 పూర్తి చేయండి</td>
+      
+      </tr>
+      <tr>
+        <td>Poem Meaning</td>
+        <td>9</td>
+        <td>2024-10-01</td>
+        <td> " ఉప్పు కప్పురంబు నొక్క పోలిక నుండు" పద్యం అర్థం  
+          వ్రాయండి</td>
+        
+      </tr>
+      <tr>
+        <td> Essay</td>
+        <td>7</td>
+        <td>2024-10-07</td>
+        <td>ఆవుపై ఒక వ్యాసం రాయండి</td>
+      </tr>
+      <tr>
+        <td>Poet History Presentation</td>
+        <td>8</td>
+        <td>2024-10-03</td>
+         <td>
+          వేమన గురించి రాయండి</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>

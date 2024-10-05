@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Leave and Salary Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Salary Section */
+    .salary-section {
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    table th, table td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #6a11cb;
+      color: white;
+    }
+
+    table td {
+      color: #333;
+    }
+
+    /* Leave Application Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      background-color: #6a11cb;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2575fc;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div class="container salary-section">
+    <h2>Salary Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Basic Pay</th>
+          <th>Allowances</th>
+          <th>Deductions</th>
+          <th>Net Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>September 2024</td>
+          <td>20000</td>
+          <td>3000</td>
+          <td>1000</td>
+          <td>22000</td>
+        </tr>
+        <tr>
+          <td>August 2024</td>
+          <td>22000</td>
+          <td>2500</td>
+          <td>1050</td>
+          <td>20050</td>
+        </tr>
+        <tr>
+          <td>July 2024</td>
+          <td>22000</td>
+          <td>2800</td>
+          <td>1200</td>
+          <td>25600</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container leave-section">
+    <h2>Apply for Leave</h2>
+    <form action="/submit-leave" method="POST">
+   
+      <label for="leaveType">Type of Leave:</label>
+      <select id="leaveType" name="leaveType" required>
+        <option value="">Select Leave Type</option>
+        <option value="Sick Leave">Sick Leave</option>
+        <option value="Casual Leave">Casual Leave</option>
+        <option value="Maternity Leave">Maternity Leave</option>
+        <option value="Earned Leave">Earned Leave</option>
+      </select>
+
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" name="fromDate" required>
+
+ 
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate" name="toDate" required>
+
+      <label for="reason">Reason for Leave:</label>
+      <textarea id="reason" name="reason" placeholder="Enter the reason for leave..." required></textarea>
+
+      <a type="submit">Apply for Leave</a>
+    </form>
+  </div>
+
+</body>
+</html>
