@@ -23,29 +23,29 @@ db.connect((err) => {
 });
 
 app.get("/",(req,res)=>{
-res.sendFile(__dirname + '/public/Login.html');    
+res.sendFile(__dirname + '/Login.html');    
 })
 app.get('/StudentHome/:id',(req,res)=>{
-    res.sendFile(__dirname + '/public/Student/StudentHome.html');    
+    res.sendFile(__dirname + '/StudentHome.html');    
     })
 app.get("/SAssignments",(req,res)=>{
-        res.sendFile(__dirname + '/public/Student/SAssignments.html');    
+        res.sendFile(__dirname + '/SAssignments.html');    
     })
 app.get("/STimetable",(req,res)=>{
-        res.sendFile(__dirname + '/public/Student/STimetable.html');    
+        res.sendFile(__dirname + '/STimeTable.html');    
     })
-    app.get("/Result",(req,res)=>{
-        res.sendFile(__dirname + '/public/Teacher/TeacherHome.html');    
+    app.get("./Result",(req,res)=>{
+        res.sendFile(__dirname + '/TeacherHome.html');    
     })
 
 app.get("/TeacherHome/:id",(req,res)=>{
-        res.sendFile(__dirname + '/public/Teacher/TeacherHome.html');    
+        res.sendFile(__dirname + '/TeacherHome.html');    
     })
     app.get("/TTimeTable",(req,res)=>{
-        res.sendFile(__dirname + '/public/Teacher/TTimeTable.html');    
+        res.sendFile(__dirname + '/TTimeTable.html');    
     })
     app.get("/TAssignments",(req,res)=>{
-        res.sendFile(__dirname + '/public/Teacher/TAssignments.html');    
+        res.sendFile(__dirname + '/TAssignments.html');    
     })
 
 
@@ -62,7 +62,6 @@ app.get("/infoStudent/:id",(req,res)=>{
         return res.json(results[0]);
 
     });
-
 });
 
 app.get("/infoTeacher/:id",(req,res)=>{
